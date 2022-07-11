@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 594426468}
   - component: {fileID: 594426470}
   - component: {fileID: 594426469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 1244818375}
   - component: {fileID: 1244818374}
   - component: {fileID: 1244818376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FPS Controller
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1101,7 +1101,7 @@ GameObject:
   - component: {fileID: 1585894160}
   - component: {fileID: 1585894159}
   - component: {fileID: 1585894158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: eyse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1194,7 +1194,7 @@ GameObject:
   - component: {fileID: 1657548758}
   - component: {fileID: 1657548757}
   - component: {fileID: 1657548756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh21234
+  m_Name: pb_Mesh18068
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1449,7 +1449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1867460704}
   - component: {fileID: 1867460705}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
