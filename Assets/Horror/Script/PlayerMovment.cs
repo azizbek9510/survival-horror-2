@@ -11,7 +11,6 @@ public class PlayerMovment : MonoBehaviour
 	public LayerMask groundMask;
 	
 	
-	
 	public float speed =5f;
 	public float gravity = -9.8f;
 	public float groundDistans = 0.4f;
