@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 264940452}
   - component: {fileID: 264940454}
   - component: {fileID: 264940453}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2056,7 +2056,7 @@ GameObject:
   - component: {fileID: 1784560947}
   - component: {fileID: 1784560946}
   - component: {fileID: 1784560945}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2867,7 +2867,7 @@ GameObject:
   - component: {fileID: 33053590930793541}
   - component: {fileID: 5938090813365276870}
   - component: {fileID: 1524112996788309451}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17222,7 +17222,7 @@ GameObject:
   - component: {fileID: 5609365525185960073}
   - component: {fileID: 5609365525204311497}
   - component: {fileID: 5609365525204411497}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17240,7 +17240,7 @@ GameObject:
   - component: {fileID: 5609365525185960075}
   - component: {fileID: 5609365525204311499}
   - component: {fileID: 5609365525204411499}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SmokyMuzzleFireAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17259,7 +17259,7 @@ GameObject:
   - component: {fileID: 5609365525204311501}
   - component: {fileID: 5609365525204411501}
   - component: {fileID: 5609365525196173645}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SmokyMuzzleFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17277,7 +17277,7 @@ GameObject:
   - component: {fileID: 5609365525185960079}
   - component: {fileID: 5609365525204311503}
   - component: {fileID: 5609365525204411503}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SniperMuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36098,7 +36098,7 @@ GameObject:
   - component: {fileID: 4338615344404392069}
   - component: {fileID: 3059918536395000561}
   - component: {fileID: 287374525223322731}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36188,7 +36188,7 @@ GameObject:
   - component: {fileID: 6049585330352229946}
   - component: {fileID: 3028987816698869924}
   - component: {fileID: 6849743813667071099}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36206,7 +36206,7 @@ GameObject:
   - component: {fileID: 7459605149052441951}
   - component: {fileID: 7840212732350713831}
   - component: {fileID: 7840212732350713830}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SHOOTGUN (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
