@@ -2696,7 +2696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &919132148850797038
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2813,8 +2813,6 @@ MonoBehaviour:
   Magazinammo: 6
   maxammo: 6
   bullet: 0
-  qoldiq: 0
-  time: 0
   tugadi: 0
   text: {fileID: 1746944366}
   Reloadtime: 2
@@ -36331,8 +36329,6 @@ MonoBehaviour:
   Magazinammo: 8
   maxammo: 2
   bullet: 0
-  qoldiq: 0
-  time: 0
   tugadi: 0
   text: {fileID: 264940453}
   Reloadtime: 2
