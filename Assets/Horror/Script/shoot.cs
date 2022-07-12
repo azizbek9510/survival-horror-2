@@ -8,7 +8,7 @@ public class shoot : MonoBehaviour
 	public float range =100f;
 	
 	public Camera cam;
-	
+	public ParticleSystem gun;
 	public AudioSource sound;
     // Start is called before the first frame update
    
@@ -25,7 +25,7 @@ public class shoot : MonoBehaviour
     
     
 	void Shoot(){
-		
+		gun.Play();
 		sound.Play();
 		RaycastHit hit;
 		if(Physics.Raycast(cam.transform.position,cam.transform.forward,out hit,range)){
