@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pistolOn : MonoBehaviour
+public class WEAPONOn : MonoBehaviour
 {
 	
 	public GameObject qoldagi;
-	
+	public GameObject qoldagi2;
 	
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,8 @@ public class pistolOn : MonoBehaviour
 		if(other.gameObject.tag=="Player"){
 			if(Input.GetKey(KeyCode.E)){
 			
-			qoldagi.SetActive(true);
+				qoldagi.SetActive(true);
+				qoldagi2.SetActive(false);
 				Destroy(gameObject, 0.1f);
 			}
 		}
