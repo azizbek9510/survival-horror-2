@@ -26,7 +26,7 @@ public class pistolOn : MonoBehaviour
 	{
 		if(other.gameObject.tag=="Player"){
 			if(Input.GetKey(KeyCode.E)){
-			Debug.Log("tegdi");
+			
 			qoldagi.SetActive(true);
 				Destroy(gameObject, 0.1f);
 			}
