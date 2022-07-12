@@ -2810,9 +2810,10 @@ MonoBehaviour:
   cam: {fileID: 1718518093}
   gun: {fileID: 4597005044153357869}
   sound: {fileID: 919132148850797038}
-  Magazinammo: 12
+  Magazinammo: 6
   maxammo: 6
   bullet: 0
+  qoldiq: 0
   time: 0
   tugadi: 0
   text: {fileID: 1746944366}
@@ -36330,6 +36331,7 @@ MonoBehaviour:
   Magazinammo: 8
   maxammo: 2
   bullet: 0
+  qoldiq: 0
   time: 0
   tugadi: 0
   text: {fileID: 264940453}

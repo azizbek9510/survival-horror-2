@@ -16,7 +16,8 @@ public class shoot : MonoBehaviour
 	public int Magazinammo=12;
 	public int maxammo=6;
 	public int bullet;
-	public float time;
+	private int qoldiq;
+	
 	public bool tugadi;
 	public Text text;
 	
@@ -40,8 +41,34 @@ public class shoot : MonoBehaviour
 	    	Shoot();
 	    	
 	    }
-		}
 	    
+		}
+		
+			
+			
+		if(Input.GetKeyDown(KeyCode.R)){
+				
+		
+			if(Magazinammo>0){
+				if(bullet<maxammo){
+						
+				qoldiq=maxammo;
+				qoldiq-=bullet;
+				
+				Magazinammo-=qoldiq;
+				bullet=maxammo;
+				
+				Debug.Log(qoldiq);
+			}
+				
+			}	
+			
+			
+			
+			
+			
+		
+		}
 		
 		text.text=bullet+"/"+Magazinammo;
 		
@@ -59,12 +86,7 @@ public class shoot : MonoBehaviour
 		
 		
 		
-		
-		/*	if(Input.GetKeyDown(KeyCode.R)){
 			
-			
-		}*/
-				
 		
 	}
 	
