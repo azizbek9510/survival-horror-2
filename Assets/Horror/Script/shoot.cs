@@ -14,11 +14,11 @@ public class shoot : MonoBehaviour
    
 	//o'qdori kodi
 	public int MAXammo=12;
-	//public int patron=6;
+	public int patron=6;
 	public int bullet;
 	public float time;
 	public bool tugadi;
-	public Text text;
+	//public Text text;
 	
 	// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
 	protected void Start()
@@ -43,7 +43,7 @@ public class shoot : MonoBehaviour
 			Reloading();
 			return;
 		}
-		text.text=bullet.ToString();
+		//text.text=bullet.ToString();
 		if(Input.GetKeyDown(KeyCode.R)){
 			
 			
