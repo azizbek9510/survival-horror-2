@@ -7,7 +7,7 @@ public class WEAPONOn : MonoBehaviour
 	
 	public GameObject qoldagi;
 	public GameObject qoldagi2;
-	
+	public GameObject CROSSSHAIR;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +29,7 @@ public class WEAPONOn : MonoBehaviour
 			
 				qoldagi.SetActive(true);
 				qoldagi2.SetActive(false);
+				CROSSSHAIR.SetActive(true);
 				Destroy(gameObject, 0.1f);
 			}
 		}

@@ -13,41 +13,57 @@ public class shoot : MonoBehaviour
 	public AudioSource sound;
    
 	//o'qdori kodi
-	public int MAXammo=12;
-	public int patron=6;
+	public int Magazinammo=12;
+	public int maxammo=6;
 	public int bullet;
 	public float time;
 	public bool tugadi;
-	//public Text text;
+	public Text text;
 	
+	public float Reloadtime =  2f;
+	public bool  isReloading;
 	// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
 	protected void Start()
 	{
-		if(bullet==-1)
-		bullet=MAXammo;
+		bullet=maxammo;
 	}
     // Update is called once per frame
     void Update()
 	{
 		
+		if(bullet>=1){
+			
 		
 		
 	    if(Input.GetButtonDown("Fire1")){
 	    	
 	    	Shoot();
-	    	Ammo();
+	    	
 	    }
+		}
 	    
-		if(bullet<=0){
+		
+		text.text=bullet+"/"+Magazinammo;
+		
+		if(bullet==0 && Magazinammo==0){
 			
-			Reloading();
 			return;
 		}
-		//text.text=bullet.ToString();
-		if(Input.GetKeyDown(KeyCode.R)){
-			
-			
+		
+		if(isReloading)
+			return;
+		
+		if(bullet==0 && !isReloading){
+			StartCoroutine(Reload());
 		}
+		
+		
+		
+		
+		/*	if(Input.GetKeyDown(KeyCode.R)){
+			
+			
+		}*/
 				
 		
 	}
@@ -75,14 +91,23 @@ public class shoot : MonoBehaviour
 		}
 	}
 	
-	void Ammo(){
+	
+	IEnumerator Reload(){
 		
-		//patron-=1;
+		isReloading = true;
 		
-	}
-	void Reloading(){
-		
-		bullet=MAXammo; 
+		yield return new WaitForSeconds(Reloadtime);
+		if(Magazinammo>=maxammo){
+			
+			bullet=maxammo;	
+			Magazinammo-=maxammo;
+		}
+		else{
+			bullet=Magazinammo;
+			Magazinammo=0;
+			
+		}
+		isReloading=false;
 	}
 	
 }
