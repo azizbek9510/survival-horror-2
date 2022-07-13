@@ -16,25 +16,33 @@ public class shoot : MonoBehaviour
 	public int Magazinammo=12;
 	public int maxammo=6;
 	public int bullet;
-	private int qoldiq;
+	public int qoldiq;
 	
 	public bool tugadi;
 	public Text text;
 	
 	public float Reloadtime =  2f;
 	public bool  isReloading;
+	
+	public Animator anim;
 	// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
 	protected void Start()
 	{
+		
+		anim=GetComponent<Animator>();
 		bullet=maxammo;
 	}
     // Update is called once per frame
     void Update()
 	{
+		if(bullet<0){
+			
+			
+		}
 		
 		if(bullet>=1){
 			
-		
+		anim.SetBool("shoot",false);
 		
 	    if(Input.GetButtonDown("Fire1")){
 	    	
@@ -69,16 +77,20 @@ public class shoot : MonoBehaviour
 			return;
 		
 		if(bullet==0 && !isReloading){
+			
+			
+			
+			
 			StartCoroutine(Reload());
 		}
 		
-		
+	
 		
 			
 		
 		}
 	
-	void reloading(){
+	public void reloading(){
 		
 		
 			
@@ -100,7 +112,7 @@ public class shoot : MonoBehaviour
 	void Shoot(){
 		gun.Play();
 		sound.Play();
-		
+		anim.SetBool("shoot",true);
 		bullet--;
 		RaycastHit hit;
 		if(Physics.Raycast(cam.transform.position,cam.transform.forward,out hit,range)){
@@ -112,6 +124,7 @@ public class shoot : MonoBehaviour
 			
 			if(target!=null){
 				target.TakeDamage(damage);
+				
 				}
 				
 				
@@ -123,7 +136,12 @@ public class shoot : MonoBehaviour
 		
 		isReloading = true;
 		
+		
+		
 		yield return new WaitForSeconds(Reloadtime);
+		
+		
+		
 		if(Magazinammo>=maxammo){
 			
 			bullet=maxammo;	
@@ -137,6 +155,22 @@ public class shoot : MonoBehaviour
 		isReloading=false;
 	}
 	
+	public void ammoreload(){
+		
+		Invoke("reloading",2f);
+		//StartCoroutine(Reload());
+		/*if(Magazinammo>=maxammo){
+			
+			bullet=maxammo;	
+			Magazinammo-=maxammo;
+		}
+		else{
+			bullet=Magazinammo;
+			Magazinammo=0;
+		
+		}*/
+		
+	}
 	
 	
 }
