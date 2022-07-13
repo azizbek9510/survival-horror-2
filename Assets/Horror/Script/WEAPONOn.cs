@@ -8,6 +8,7 @@ public class WEAPONOn : MonoBehaviour
 	public GameObject qoldagi;
 	public GameObject qoldagi2;
 	public GameObject CROSSSHAIR;
+	private switchweapon shootgun;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,9 @@ public class WEAPONOn : MonoBehaviour
 	{
 		if(other.gameObject.tag=="Player"){
 			if(Input.GetKey(KeyCode.E)){
+			
+				shootgun=FindObjectOfType<switchweapon>();
+				shootgun.bor=true;
 			
 				qoldagi.SetActive(true);
 				qoldagi2.SetActive(false);

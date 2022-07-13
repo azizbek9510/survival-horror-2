@@ -48,27 +48,15 @@ public class shoot : MonoBehaviour
 			
 		if(Input.GetKeyDown(KeyCode.R)){
 				
-		
 			if(Magazinammo>0){
 				if(bullet<maxammo){
-						
-				qoldiq=maxammo;
-				qoldiq-=bullet;
-				
-				Magazinammo-=qoldiq;
-				bullet=maxammo;
-				
-				Debug.Log(qoldiq);
-			}
-				
-			}	
-			
-			
-			
-			
-			
+					
+					Invoke("reloading",2f);
+				}
+		}
 		
 		}
+		
 		
 		text.text=bullet+"/"+Magazinammo;
 		
@@ -88,8 +76,25 @@ public class shoot : MonoBehaviour
 		
 			
 		
-	}
+		}
 	
+	void reloading(){
+		
+		
+			
+				qoldiq=maxammo;
+				qoldiq-=bullet;
+				
+				Magazinammo-=qoldiq;
+				bullet=maxammo;
+				
+				Debug.Log(qoldiq);
+			
+			
+				
+		
+		
+	}
 			
     
 	void Shoot(){
@@ -131,5 +136,7 @@ public class shoot : MonoBehaviour
 		}
 		isReloading=false;
 	}
+	
+	
 	
 }
