@@ -46,24 +46,50 @@ public class shoot : MonoBehaviour
 		
 	    if(Input.GetButtonDown("Fire1")){
 	    	
+	    	if(bullet>=0){
+	    		
 	    	Shoot();
-	    	
+	    	}
 	    }
 	    
 		}
 		
 			
 			
-		if(Input.GetKeyDown(KeyCode.R)){
+		if(Input.GetKeyDown(KeyCode.R)&&Magazinammo>0){
 				
-			if(Magazinammo>0){
-				if(bullet<maxammo){
+			
+			if(Magazinammo<maxammo){
+				
+				qoldiq=maxammo-bullet;
+				Magazinammo-=qoldiq;
+				
+				bullet+=Magazinammo;
+				
+				if(Magazinammo<=0){
 					
-					Invoke("reloading",2f);
+					Magazinammo=0;
 				}
-		}
+				bullet=bullet+qoldiq;
+				Debug.Log(qoldiq);
+					
+			}else{
+						
+						qoldiq=maxammo;
+				    qoldiq-=bullet;
+				    Magazinammo-=qoldiq;
+					bullet=maxammo;
+				//Debug.Log(Magazinammo);
+						
+					}
+					
+					
+					
+					
+				}
+	
+
 		
-		}
 		
 		
 		text.text=bullet+"/"+Magazinammo;
@@ -74,7 +100,7 @@ public class shoot : MonoBehaviour
 		}
 		
 		if(isReloading)
-			return;
+		return;
 		
 		if(bullet==0 && !isReloading){
 			
@@ -90,14 +116,15 @@ public class shoot : MonoBehaviour
 		
 		}
 	
-	public void reloading(){
+	/*public void reloading(){
 		
 		
 			
 				qoldiq=maxammo;
 				qoldiq-=bullet;
 				
-				Magazinammo-=qoldiq;
+		        Magazinammo-=qoldiq;
+		      
 				bullet=maxammo;
 				
 				Debug.Log(qoldiq);
@@ -106,10 +133,11 @@ public class shoot : MonoBehaviour
 				
 		
 		
-	}
+	}*/
 			
     
 	void Shoot(){
+		if(bullet>0){
 		gun.Play();
 		sound.Play();
 		anim.SetBool("shoot",true);
@@ -126,7 +154,7 @@ public class shoot : MonoBehaviour
 				target.TakeDamage(damage);
 				
 				}
-				
+		}	
 				
 		}
 	}
@@ -155,22 +183,7 @@ public class shoot : MonoBehaviour
 		isReloading=false;
 	}
 	
-	public void ammoreload(){
-		
-		Invoke("reloading",2f);
-		//StartCoroutine(Reload());
-		/*if(Magazinammo>=maxammo){
-			
-			bullet=maxammo;	
-			Magazinammo-=maxammo;
-		}
-		else{
-			bullet=Magazinammo;
-			Magazinammo=0;
-		
-		}*/
-		
-	}
+	
 	
 	
 }

@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - AI
   - pistol
   - ammo
   layers:
@@ -15,26 +16,26 @@ TagManager:
   - UI
   - 
   - 
-  - weapon
+  - PostProcessingVolumes
+  - EnvironmentRough
+  - EnvironmentDetail
+  - MovingPlatforms
+  - DynamicProps
+  - CharacterControllers
+  - CharacterFirstPerson
+  - CharacterExternal
+  - CharacterPhysics
+  - CharacterRagdoll
+  - CharacterNonColliding
+  - WieldablesFirstPerson
+  - WieldablesExternal
+  - TriggerZones
+  - InteractiveObjects
+  - Doors
+  - SmallDynamicObjects
+  - Effects
+  - AiVisibility
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 
