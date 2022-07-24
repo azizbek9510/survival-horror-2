@@ -7,11 +7,15 @@ public class WEAPONOn : MonoBehaviour
 	
 	public GameObject qoldagi;
 	public GameObject qoldagi2;
-	public GameObject CROSSSHAIR;
-	public switchweapon change;
+	public GameObject qoldagi3;
+	private camerazoom zoom;
+	private switchweapon change;
+	private shootgunshoot anim;
+	public bool weaponadd;
     // Start is called before the first frame update
     void Start()
-    {
+	{
+		weaponadd=false;
 	    qoldagi.SetActive(false);
     }
 
@@ -27,15 +31,29 @@ public class WEAPONOn : MonoBehaviour
 	{
 		if(other.gameObject.tag=="Player"){
 			if(Input.GetKey(KeyCode.E)){
-			
+				anim=FindObjectOfType<shootgunshoot>();
+				if(anim!=null)
+				anim.anim.SetBool("changeweapon2",true);
+				
 				change=FindObjectOfType<switchweapon>();
-				change.bor=true;
-			
+				
+				weaponadd=true;
+				change.pistolet = true;
+				change.shootgunweapon=false;
+				change.aksweapon=true;
 				qoldagi.SetActive(true);
 				qoldagi2.SetActive(false);
-				CROSSSHAIR.SetActive(true);
-				Destroy(gameObject, 0.1f);
+				qoldagi3.SetActive(false);
+				Invoke("retardanimation",0.1f);
+				Destroy(gameObject, 0.2f);
 			}
 		}
 	}
+	
+	void retardanimation(){
+		if(anim!=null)
+			anim.anim.SetBool("changeweapon2",false);
+		
+	}
+	
 }
