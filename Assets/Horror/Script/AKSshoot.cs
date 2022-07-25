@@ -12,7 +12,9 @@ public class AKSshoot : MonoBehaviour
 	public Camera cam;
 	public ParticleSystem gun;
 	public AudioSource sound;
-   
+	public AudioClip shoot;
+	public AudioClip reloaded;
+	
 	//o'qdori kodi
 	//public int Magazinammo=12;
 	private magazinaks ammo;
@@ -39,6 +41,7 @@ public class AKSshoot : MonoBehaviour
 		ammo=FindObjectOfType<magazinaks>();
 		canshoot=true;
 		anim=GetComponent<Animator>();
+		//reloaded=GetComponent<AudioSource>();
 		bullet=maxammo;
 	}
 	// Update is called once per frame
@@ -93,7 +96,7 @@ public class AKSshoot : MonoBehaviour
 			
 			anim.SetBool("aksshoot",false);
 			anim.SetBool("aksreload",true);
-			
+			//reloaded.Play();
 		StartCoroutine(Reload());
 			
 			}
@@ -108,7 +111,7 @@ public class AKSshoot : MonoBehaviour
 			
 			canshoot=false;
 			anim.SetBool("aksreload",true);
-			
+			Invoke("relaodesound",1f);
 			Invoke("reload",2f);
 			
 			
@@ -188,13 +191,16 @@ public class AKSshoot : MonoBehaviour
 		anim.SetBool("aksreload",false);
 	}
 		
-	
+	void relaodesound(){
+		
+		sound.PlayOneShot(reloaded);
+	}
 		
 		
     
 	void Shoot(){
 		gun.Play();
-		sound.Play();
+		sound.PlayOneShot(shoot);
 		anim.SetBool("aksshoot",true);
 		canshoot=false;
 		bullet--;

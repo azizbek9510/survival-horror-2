@@ -6,7 +6,7 @@ public class Target : MonoBehaviour
 {
 	//public GameObject game;
 	public float healt=50f;
-	//private AImonster dead;
+	private AImonster deads;
 	
 	// Start is called on the frame when a script is enabled just before any of the Update methods is called the first time.
 	protected void Start()
@@ -14,12 +14,19 @@ public class Target : MonoBehaviour
 		//anim=GetComponent<Animator>();
 	}
 	
+	// Update is called every frame, if the MonoBehaviour is enabled.
+	protected void Update()
+	{
+		
+	}
+	
 	public void TakeDamage (float amount){
 		
 		healt-=amount;
 		if(healt<=0f){
-			
-			
+			if(deads!=null)
+				deads.kill();
+			//Debug.Log("DEAD");
 			Die();
 		}
 		
@@ -28,9 +35,10 @@ public class Target : MonoBehaviour
 	void Die(){
 		
 		
-		Debug.Log("DEAD");
-		//dead.anim.Play("dead");
-		//Destroy(game,2f);
-		Destroy(gameObject);
+		
+		
+	
+			
+		//Destroy(gameObject,5f);
 	}
 }
