@@ -111,7 +111,7 @@ public class AKSshoot : MonoBehaviour
 			
 			canshoot=false;
 			anim.SetBool("aksreload",true);
-			Invoke("relaodesound",1.3f);
+			Invoke("relaodesound",1f);
 			Invoke("reload",2f);
 			
 			
