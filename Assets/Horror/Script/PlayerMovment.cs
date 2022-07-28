@@ -59,11 +59,11 @@ public class PlayerMovment : MonoBehaviour
 		if (Input.GetKey("left shift"))
 		{
 			shake.run=true;
-			speed = 13f;
+			speed = 6f;
 		} else
 		{
 			shake.run=false;
-			speed = 5f;
+			speed = 3f;
 		}
 	    
 		if(z>0||z<0){
